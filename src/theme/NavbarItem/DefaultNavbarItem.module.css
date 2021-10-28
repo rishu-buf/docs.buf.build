@@ -1,0 +1,220 @@
+.hideExternalLinkIcon > :global(span) > :global(svg) {
+  display: none;
+}
+
+/*
+link is a plain link in the navbar.
+*/
+.link {
+  font-family: var(--buf-mono-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  background-position: center;
+  padding-left: 0 !important; /* "important" to override infima styles */
+  padding-right: 0 !important; /* "important" to override infima styles */
+  padding-bottom: 0.125rem;
+  background-image: linear-gradient(to top, currentColor 1px, transparent 1px);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: background-size 0.4s ease-in-out , opacity 0.4s ease-in-out;
+}
+.link:hover {
+  color: var(--ifm-color-primary);
+  background-size: 100% 100%;
+}
+/* In the navbar-sidebar (the menu that shows the navbar items in the navbar
+   collapsed state), we want a different style */
+:global(.navbar-sidebar__items) .link {
+  font-size: 24px;
+  color: #9292a9;
+  border: 0 solid #9292a95e;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+:global(.navbar-sidebar__items) .link:hover {
+  background: none;
+}
+
+
+/*
+button is a button with a light outline and the same text color as plain links.
+*/
+.button {
+  font-family: var(--buf-mono-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.25;
+
+  margin-left: 1rem;
+
+  padding: 0.5rem 0.75rem !important; /* "important" to override infima styles */
+  color: var(--ifm-navbar-link-color);
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--buf-light-button-border-color);
+  border-radius: 2px;
+  text-align: center;
+  transition: border-color 0.2s ease-in-out , color 0.2s ease-in-out;
+}
+.button:hover {
+  color: #191E8C;
+  border-color: #191E8C;
+}
+/* In the navbar-sidebar (the menu that shows the navbar items in the navbar
+   collapsed state), we want a different style */
+:global(.navbar-sidebar__items) .button {
+  padding: 0.75rem 1.25rem !important; /* "important" to override infima styles */
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+}
+
+
+/*
+darkButton is a button with a dark background and light text.
+*/
+.darkButton {
+  font-family: var(--buf-mono-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.25;
+
+  margin-left: 1rem;
+
+  padding: 0.5rem 0.75rem !important; /* "important" to override infima styles */
+  color: #fff !important;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #090a3a;
+  text-align: center;
+}
+.darkButton:hover {
+  background-color: #191E8C;
+}
+/* In the navbar-sidebar (the menu that shows the navbar items in the navbar
+   collapsed state), we want a different style */
+:global(.navbar-sidebar__items) .darkButton {
+  padding: 0.75rem 1.25rem !important; /* "important" to override infima styles */
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+}
+
+
+/*
+lightButton is a button with a light outline and light text.
+*/
+.lightButton {
+  font-family: var(--buf-mono-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.25;
+
+  margin-left: 1rem;
+
+  padding: 0.5rem 0.75rem !important; /* "important" to override infima styles */
+  color: var(--buf-light-button-color);
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--buf-light-button-border-color);
+  border-radius: 2px;
+  text-align: center;
+  transition: border-color 0.2s ease-in-out , color 0.2s ease-in-out;
+}
+.lightButton:hover {
+  color: #191E8C;
+  border-color: #191E8C;
+}
+/* In the navbar-sidebar (the menu that shows the navbar items in the navbar
+   collapsed state), we want a different style */
+:global(.navbar-sidebar__items) .lightButton {
+  padding: 0.75rem 1.25rem !important; /* "important" to override infima styles */
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+}
+
+
+/*
+iconButton can be used in combination with lightButton and slack|github.
+On narrow screens, it shows only the icon.
+*/
+.iconButton > span {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.5rem;
+}
+.iconButton > span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  margin: auto 0;
+  background-size: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.2s ease-in-out;
+}
+/* We're setting a min-width as well so we don't apply the style to the item in the navbar-sidebar
+   (the menu that shows the navbar items in the navbar collapsed state). */
+@media (min-width: 997px) and (max-width: 1338px) {
+  .iconButton {
+    border: 0;
+    padding: 0.5rem 0.5rem !important;
+    margin-left: 0.25rem;
+  }
+  .iconButton > span {
+    display: inline-block;
+    width: 1rem;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 !important;
+    color: transparent;
+  }
+}
+
+/*
+slack can be used in combination with lightButton iconButton
+*/
+.slack > span::before {
+  background-image: var(--buf-gray-slack-icon);
+}
+.slack:hover > span::before {
+  background-image: var(--buf-blue-slack-icon);
+}
+
+/*
+github can be used in combination with lightButton iconButton
+*/
+.github > span::before {
+  background-image: var(--buf-gray-github-icon);
+}
+.github:hover > span::before {
+  background-image: var(--buf-blue-github-icon);
+}

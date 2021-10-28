@@ -1,0 +1,30 @@
+/**
+ * This file is a swizzled and wrapped component, generated and adapted from the
+ * docusaurus source code, copyright of Facebook, Inc.
+ *
+ * The adapted content is licensed under the MIT licence; and the licence can be
+ * found at https://github.com/facebook/docusaurus/blob/master/LICENSE
+ *
+ * To learn more about component swizzling, see:
+ * https://docusaurus.io/docs/using-themes#wrapping-theme-components
+ *
+ * For original sources see:
+ * https://github.com/facebook/docusaurus/tree/v2.0.0-beta.3/packages/docusaurus-theme-search-algolia/src/theme
+ */
+
+@media (max-width: 996px) {
+  .searchBox {
+    position: absolute;
+    /* We account for the navbar menu toggle button, which we have moved to the
+       very right, and add a bit of extra space */
+    right: calc(var(--ifm-navbar-padding-horizontal) + 50px);
+  }
+}
+
+@media (min-width: 997px) {
+  .searchBox {
+    padding: var(--ifm-navbar-item-padding-vertical)
+      var(--ifm-navbar-item-padding-horizontal);
+    margin-left: 8.5rem;
+  }
+}

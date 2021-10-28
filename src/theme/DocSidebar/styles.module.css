@@ -1,0 +1,37 @@
+
+/* Decreases the font size and spacings in the left-hand sidebar */
+.menuLink {
+  font-size: 0.9em;
+  padding: 4px;
+  line-height: 18px;
+}
+
+.expandAllControls {
+  display: flex;
+}
+.expandAllControls > button {
+  color: var(--ifm-menu-color);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0.4rem;
+}
+.expandAllControls > button:hover {
+  color: var(--ifm-color-emphasis-800);
+}
+.expandAllControls > button:active {
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Show / hide controls in sync with the menu */
+@media (max-width: 996px) {
+  .expandAllControls {
+    display: none;
+  }
+  :global(.menu--show) .expandAllControls {
+    display: flex !important;
+  }
+}

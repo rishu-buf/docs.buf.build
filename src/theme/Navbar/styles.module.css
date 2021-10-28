@@ -1,0 +1,105 @@
+/**
+ * This file is a swizzled and wrapped component, generated and adapted from the
+ * docusaurus source code, copyright of Facebook, Inc.
+ *
+ * The adapted content is licensed under the MIT licence; and the licence can be
+ * found at https://github.com/facebook/docusaurus/blob/master/LICENSE
+ *
+ * To learn more about component swizzling, see:
+ * https://docusaurus.io/docs/using-themes#wrapping-theme-components
+ *
+ * For original sources see:
+ * https://github.com/facebook/docusaurus/tree/v2.0.0-beta.3/packages/docusaurus-theme-classic/src/theme
+ */
+
+@media screen and (max-width: 997px) {
+  .displayOnlyInLargeViewport {
+    display: none !important;
+  }
+}
+
+.navbarHideable {
+  transition: transform var(--ifm-transition-fast) ease;
+}
+
+.navbarHidden {
+  transform: translate3d(0, calc(-100% - 2px), 0);
+}
+
+.bufColors {
+  /* Set a light background color */
+  --ifm-navbar-background-color: #EFF9FC;
+  --ifm-navbar-shadow: none;
+}
+
+.movedToggleButton {
+  position: absolute;
+  /* The theme places the search box at the very right. We have patched it
+     to leave room. */
+  right: var(--ifm-navbar-padding-horizontal);
+}
+
+
+/* We restyle the menu that shows the navbar items in the navbar
+   collapsed state */
+.bufNavbarSidebar {
+  --ifm-navbar-sidebar-width: 100%;
+  bottom: auto;
+  padding-bottom: 1rem;
+  background-color: white;
+}
+.bufNavbarSidebarHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0;
+}
+.bufNavbarSidebarHeader > span {
+  color: rgba(9,10,58,0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--buf-mono-font);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.bufNavbarSidebarHeader > button {
+  background-color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid #818C8F;
+  border-radius: 2px;
+  position: relative;
+}
+.bufNavbarSidebarHeader > button:focus {
+  outline: none;
+}
+.bufNavbarSidebarHeader > button::before, .bufNavbarSidebarHeader > button::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  width: 0.75rem;
+  height: 1px;
+  background-color: #090a3a;
+  transition: transform .5s ease-in-out;
+}
+.bufNavbarSidebarHeader > button::before {
+  width: 1.25rem;
+  transform: rotate(45deg);
+}
+.bufNavbarSidebarHeader > button::after {
+  width: 1.25rem;
+  transform: rotate(-45deg);
+}
+ul.bufNavbarSidebarSocialList {
+  display: flex;
+  flex-direction: row;
+}
+ul.bufNavbarSidebarSocialList > li {
+  flex-grow: 1;
+}
+ul.bufNavbarSidebarSocialList > li > a {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
