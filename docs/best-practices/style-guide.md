@@ -13,7 +13,7 @@ The requirements follow the set of rules from the [`DEFAULT`](../lint/rules.md#d
 
 > **NOTE:**
 >
-> These recommendations are not enforced by the BSR, although these are for your reference.All files should have a package defined. [(Why?)](../lint/rules.md#package_defined)
+> These recommendations are not enforced by the BSR, although these are for your reference. All files should have a package defined. [(Why?)](../lint/rules.md#package_defined)
 
 ### Files and Packages
 
