@@ -152,4 +152,4 @@ The following recommendations are exceptional style to avoid and set up breaking
 
 * Avoid using nested enums and nested messages. You may end up wanting to use them outside of their context message in the future, even if you do not think so at the moment.
 
-* Avoiding RPCs streaming as it is an obstacle to push RPC framework logic up the stack and it usually prevent developing more reliable architectures. Although they certainly have specific use cases that make them extremely valuable.
+* Avoid RPCs streaming as it is an obstacle to push RPC framework logic up the stack and it usually prevent developing more reliable architectures. Although they certainly have specific use cases that make them extremely valuable.
